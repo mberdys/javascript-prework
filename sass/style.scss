@@ -2,8 +2,8 @@
     box-sizing: border-box;}
 
 /* Variables */
-$color-two: #f19066;
-$color-bk: #408DA7;
+$color-main: #3c6382;
+$color-two: #FFF;
 
 $font-header: 'Berkshire Swash', cursive;
 $font-main: 'Roboto', sans-serif;
@@ -17,16 +17,17 @@ body {
 
 .container {
   max-width: 600px;
-  border: 1px solid $color-two;
+  border-radius: 10px;
   margin: 40px auto;
   padding: 60px 0 100px 0;
-
+  background-color: $color-main;
 }
 
 .splash-inner h1 {
   font-family: $font-header;
   padding-bottom: 30px;
-  color: #fff;
+  color: $color-two;
+  letter-spacing: 0.06em;
 }
 
 #buttons {
@@ -34,19 +35,36 @@ body {
 }
 
 button {
-    display: inline-block;
-    min-width: 80px;
-    margin: 24px 10px 0 10px;
-    padding: 12px 35px;
-    border-radius: 5px;
-    border: none;
-    font-size: 14px;
-    font-family: $font-main;
-    font-weight: 900;
-    letter-spacing: 0.06em;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    background-color: $color-two;
-    color: #fff;
+  display: inline-block;
+  min-width: 80px;
+  margin: 24px 10px 0 10px;
+  padding: 12px 35px;
+  border-radius: 5px;
+  border: 2px solid $color-two;
+  font-size: 14px;
+  font-family: $font-main;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: inherit;
+  color: $color-two;
+  background-position: 100% 0;
+  background-size: 300%;
+  transition: all 1s;
+  background-image: linear-gradient(90deg, #fff 50%, transparent 50%);
+}
+
+button:hover {
+    background-position: 0 100%;
+    color: $color-main;
+}
+
+#messages {
+  color: $color-two;
+}
+
+#result {
+  color: $color-two;
 }
