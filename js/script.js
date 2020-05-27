@@ -8,7 +8,8 @@ function clearMessages(){
 	document.getElementById('messages').innerHTML = '';
 }
 
-var argButtonName, buttonRock, buttonPaper, buttonScissors, playerWin, computerWin, result;
+let argButtonName, buttonRock, buttonPaper, buttonScissors, playerWin, computerWin, result;
+
 buttonRock = document.getElementById('button-rock');
 buttonPaper = document.getElementById('button-paper');
 buttonScissors = document.getElementById('button-scissors');
@@ -34,7 +35,7 @@ function buttonClicked(argButtonName) {
 	}
 
 	function displayResult(argPlayerMove, argComputerMove) {
-	  console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
+	  console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ',' + argComputerMove);
 	  if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
 	    printMessage('Wygrywasz!');
 			playerWin = playerWin + 1;
