@@ -8,10 +8,12 @@ function clearMessages(){
 	document.getElementById('messages').innerHTML = '';
 }
 
-var argButtonName, buttonRock, buttonPaper, buttonScissors;
+var argButtonName, buttonRock, buttonPaper, buttonScissors, playerWin, computerWin, result;
 buttonRock = document.getElementById('button-rock');
 buttonPaper = document.getElementById('button-paper');
 buttonScissors = document.getElementById('button-scissors');
+playerWin = 0;
+computerWin = 0;
 
 function buttonClicked(argButtonName) {
   clearMessages();
@@ -35,16 +37,21 @@ function buttonClicked(argButtonName) {
 	  console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
 	  if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
 	    printMessage('Wygrywasz!');
+			playerWin = playerWin + 1;
 	  } else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
 	  	printMessage('Wygrywasz!');
+			playerWin = playerWin + 1;
 	  } else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier') {
 	  	printMessage('Wygrywasz!');
+			playerWin = playerWin + 1;
 	  } else if (argPlayerMove ==  argComputerMove) {
 			printMessage('Remis!');
 	  } else {
 	    printMessage('Przegrywasz :(');
+			computerWin = computerWin + 1;
 	  }
 	  printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
+		document.getElementById('result').innerHTML = playerWin + '-' + computerWin;
 	}
 	playerMove = argButtonName;
 	console.log('ruch gracza to: ' + playerMove);
