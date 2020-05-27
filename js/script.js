@@ -8,13 +8,14 @@ function clearMessages(){
 	document.getElementById('messages').innerHTML = '';
 }
 
-let argButtonName, buttonRock, buttonPaper, buttonScissors, playerWin, computerWin, result;
+let argButtonName,
+playerWin = 0,
+computerWin = 0,
+result;
 
-buttonRock = document.getElementById('button-rock');
-buttonPaper = document.getElementById('button-paper');
+const buttonRock = document.getElementById('button-rock'),
+buttonPaper = document.getElementById('button-paper'),
 buttonScissors = document.getElementById('button-scissors');
-playerWin = 0;
-computerWin = 0;
 
 function buttonClicked(argButtonName) {
   clearMessages();
@@ -52,7 +53,7 @@ function buttonClicked(argButtonName) {
 			computerWin = computerWin + 1;
 	  }
 	  printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
-		document.getElementById('result').innerHTML = playerWin + '-' + computerWin;
+		document.getElementById('result').innerHTML = computerWin + '-' + playerWin;
 	}
 	playerMove = argButtonName;
 	console.log('ruch gracza to: ' + playerMove);

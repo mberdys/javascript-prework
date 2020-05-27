@@ -2,7 +2,8 @@
     box-sizing: border-box;}
 
 /* Variables */
-$color-two: #F85C50;
+$color-two: #f19066;
+$color-bk: #408DA7;
 
 $font-header: 'Berkshire Swash', cursive;
 $font-main: 'Roboto', sans-serif;
@@ -19,11 +20,17 @@ body {
   border: 1px solid $color-two;
   margin: 40px auto;
   padding: 60px 0 100px 0;
+
 }
 
 .splash-inner h1 {
   font-family: $font-header;
   padding-bottom: 30px;
+  color: #fff;
+}
+
+#buttons {
+  margin-bottom: 30px;
 }
 
 button {
@@ -33,11 +40,13 @@ button {
     padding: 12px 35px;
     border-radius: 5px;
     border: none;
-    font-size: 12px;
+    font-size: 14px;
     font-family: $font-main;
+    font-weight: 900;
+    letter-spacing: 0.06em;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
     background-color: $color-two;
-    color: #000;
+    color: #fff;
 }
